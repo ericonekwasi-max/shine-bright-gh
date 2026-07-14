@@ -13,6 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import heroImage from "@/assets/hero-car-wash.jpg";
+import ogImage from "@/assets/og-image.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
