@@ -204,8 +204,8 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-foreground">Get in Touch</h3>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <MapPin mt-0.5 h-4 w-4 aria-hidden="true" />
+              <li className="flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
                 <span>Contact via Yellow Pages Ghana</span>
               </li>
               <li className="flex items-center gap-2">
