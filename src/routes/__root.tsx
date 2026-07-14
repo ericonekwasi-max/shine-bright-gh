@@ -78,22 +78,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Premium Car Wash Sekondi-Takoradi | Top-Rated Detailing" },
+      { title: "Premium Car Wash & Detailing in Sekondi-Takoradi" },
       {
         name: "description",
         content:
-          "Discover the best car wash and auto detailing services in Sekondi-Takoradi. Compare E-Klin, Silver Star Auto, and other top-rated local car care centers.",
+          "Compare top-rated car wash and auto detailing centers in Sekondi-Takoradi. Book professional washing, waxing, and interior cleaning.",
       },
       { name: "author", content: "Premium Car Wash Guide" },
-      { property: "og:title", content: "Premium Car Wash Sekondi-Takoradi" },
+      { property: "og:title", content: "Premium Car Wash & Detailing in Sekondi-Takoradi" },
       {
         property: "og:description",
         content:
-          "Find top-rated car wash and detailing centers in Sekondi-Takoradi, Ghana. Professional washing, waxing, and interior cleaning.",
+          "Compare top-rated car wash and auto detailing centers in Sekondi-Takoradi. Book professional washing, waxing, and interior cleaning.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Premium Car Wash & Detailing in Sekondi-Takoradi" },
+      { name: "twitter:description", content: "Compare top-rated car wash and auto detailing centers in Sekondi-Takoradi. Book professional washing, waxing, and interior cleaning." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/05ddc365-6c8b-4b8d-b236-cba55c0aa28d" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/05ddc365-6c8b-4b8d-b236-cba55c0aa28d" },
     ],
     links: [
       {
