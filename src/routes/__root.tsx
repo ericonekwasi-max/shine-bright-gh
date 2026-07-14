@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Droplets, Phone, Mail, MapPin } from "lucide-react";
 
 function NotFoundComponent() {
   return (
@@ -77,11 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Premium Car Wash Sekondi-Takoradi | Top-Rated Detailing" },
+      {
+        name: "description",
+        content:
+          "Discover the best car wash and auto detailing services in Sekondi-Takoradi. Compare E-Klin, Silver Star Auto, and other top-rated local car care centers.",
+      },
+      { name: "author", content: "Premium Car Wash Guide" },
+      { property: "og:title", content: "Premium Car Wash Sekondi-Takoradi" },
+      {
+        property: "og:description",
+        content:
+          "Find top-rated car wash and detailing centers in Sekondi-Takoradi, Ghana. Professional washing, waxing, and interior cleaning.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -119,8 +128,101 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Navigation />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </QueryClientProvider>
+  );
+}
+
+function Navigation() {
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center gap-2 text-foreground">
+          <Droplets className="h-6 w-6 text-primary" aria-hidden="true" />
+          <span className="text-lg font-bold tracking-tight">Takoradi Car Care</span>
+        </Link>
+        <nav className="hidden items-center gap-6 md:flex">
+          <Link
+            to="/"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Home
+          </Link>
+          <Link
+            to="/contact"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Contact
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Book Now
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-border bg-card">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div>
+            <div className="flex items-center gap-2 text-foreground">
+              <Droplets className="h-5 w-5 text-primary" aria-hidden="true" />
+              <span className="font-bold tracking-tight">Takoradi Car Care</span>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Connecting car owners in Sekondi-Takoradi with trusted wash and detailing services.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground">Quick Links</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link to="/" className="hover:text-foreground">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-foreground">
+                  Contact & Booking
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground">Get in Touch</h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <MapPin mt-0.5 h-4 w-4 aria-hidden="true" />
+                <span>Contact via Yellow Pages Ghana</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="mt-0.5 h-4 w-4" aria-hidden="true" />
+                <span>info@takoradicarcare.com.gh</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                <span>Sekondi-Takoradi, Western Region, Ghana</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Takoradi Car Care. All rights reserved.
+        </div>
+      </div>
+    </footer>
   );
 }
