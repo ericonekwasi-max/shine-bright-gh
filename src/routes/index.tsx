@@ -75,6 +75,15 @@ const listings = [
     description:
       "A local 5.0-rated car wash centre in Takoradi offering standard and premium wash packages for everyday drivers and detail enthusiasts.",
   },
+  {
+    name: "Race Course Washing Bay",
+    location: "globcom rd, Takoradi",
+    rating: 4.7,
+    reviews: 3,
+    tags: ["Full-Body Washing", "Interior Vacuuming", "Engine Degreasing"],
+    description:
+      "A well-known auto detailing and car wash spot offering full-body washing, interior vacuuming, and engine degreasing for commercial and private vehicles.",
+  },
 ];
 
 const services = [
