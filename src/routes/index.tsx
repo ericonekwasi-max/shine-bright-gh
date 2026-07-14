@@ -27,6 +27,22 @@ export const Route = createFileRoute("/")({
         content:
           "Compare top-rated car wash and auto detailing centers in Sekondi-Takoradi. Book professional washing, waxing, and interior cleaning.",
       },
+      {
+        property: "og:image",
+        content: ogImage,
+      },
+      {
+        property: "og:image:width",
+        content: "1200",
+      },
+      {
+        property: "og:image:height",
+        content: "630",
+      },
+      {
+        name: "twitter:image",
+        content: ogImage,
+      },
     ],
   }),
 });
