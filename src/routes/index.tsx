@@ -13,7 +13,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import heroImage from "@/assets/hero-car-wash.jpg";
-import ogImage from "@/assets/og-image.jpg";
+
+const ogImage = "https://takoradi-car-care.netlify.app/og-image.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
